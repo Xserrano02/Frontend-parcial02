@@ -1,0 +1,23 @@
+
+<div class="table-container">
+    <table>
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Departamento</th>
+          <th>Candidato</th>
+          <th>Votos</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let item of data">
+          <td>{{ item.id }}</td>
+          <td>{{ item.departamento }}</td>
+          <td>{{ item.candidato }}</td>
+          <td>{{ item.votos }}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  
+  

@@ -1,0 +1,37 @@
+<form #loginForm="ngForm">
+
+  <div class="inputGroup inputGroup1" style="text-align: center">
+    <label>UFG</label>
+  </div>
+  <div style="text-align: center;">
+    <img src="https://onlineuniversity.ufg.edu.sv/img/logos/Logo_Corporativo_UFG/Logo_Corporativo_Horizontal.png" alt="UFG" style="width: 320px; height: 150px;">
+  </div>  
+
+  <div class="inputGroup inputGroup1">
+    <label for="email1">Username</label>
+    <input type="text" id="email" name="email" [(ngModel)]="username" class="email" maxlength="256" required/>
+    <p class="helper helper1">user@domain.com</p>
+    <span class="indicator"></span>
+  </div>
+  <div class="inputGroup inputGroup2">
+    <label for="password">Password</label>
+    <input type="password" id="password" name="password" [(ngModel)]="password" class="password" required minlength="8" maxlength="16"
+    />
+    <div style="text-align: center">
+      <a routerLink="/forgot">Forgot your password?</a>
+    </div>
+    <div style="text-align: center">
+      <a routerLink="/new-user">New User</a>
+    </div>
+  </div>
+  <div class="inputGroup inputGroup3">
+    <button id="login" type="button" (click)="login()" >Log in
+      <i class="fa fa-sign-in" aria-hidden="true"></i>
+    </button>
+
+  </div>
+
+  <mat-card appearance="outlined" *ngIf="message">{{message}}</mat-card>
+  <mat-card appearance="outlined" *ngIf="error">{{error}}</mat-card>
+
+</form>
